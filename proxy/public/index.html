@@ -8,6 +8,7 @@
   </head>
   <body>
     <div id="Standings"></div>
+    <div id="Feed"></div>
     <div id="Schedule"></div>
     <div id="TeamLeaders"></div>
     <div id="Stats"></div>
@@ -17,12 +18,18 @@
     <script src="http://localhost:3002/bundle.js"></script>
     <script src="http://localhost:3003/bundle.js"></script>
     <script src="http://localhost:3004/bundle.js"></script>
+    <script src="http://localhost:3005/bundle.js"></script>
+
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
       ReactDOM.render(
         React.createElement(Standings),
         document.getElementById('Standings')
       );
+      ReactDOM.render(
+      React.createElement(Feed),
+      document.getElementById('Feed')
+    );
       ReactDOM.render(
       React.createElement(Schedule),
       document.getElementById('Schedule')
