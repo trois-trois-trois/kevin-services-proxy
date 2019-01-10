@@ -8,14 +8,20 @@
   </head>
   <body>
     <div id="Standings"></div>
+    <div id="Schedule"></div>
     <script src="/lib/react.development.js"></script>
     <script src="/lib/react-dom.development.js"></script>
     <script src="http://localhost:3001/bundle.js"></script>
+    <script src="http://localhost:3002/bundle.js"></script>
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
       ReactDOM.render(
         React.createElement(Standings),
         document.getElementById('Standings')
+      );
+      ReactDOM.render(
+      React.createElement(Schedule),
+      document.getElementById('Schedule')
       );
     </script>
   </body>
