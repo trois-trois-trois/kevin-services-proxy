@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 import MainComponent from './components/MainComponent.jsx';
 
-// const sampleData = require('./Sample_Data.js');
-
 class App extends Component {
   constructor(props) {
     super(props);

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 const style = {
@@ -80,34 +82,26 @@ const Schedule = ({ ramsSchedule }) => (
             <td>
               {schedule.vs}
               <img src={`${schedule.opponentlogo}`} className="rounded-circle" width={25} height={25} style={style.image} />
-              {' '}
               <a href={`${schedule.link}`}>{schedule.city}</a>
             </td>
             <td>
               {schedule.wl}
-              {' '}
               <a href={`${schedule.link}`}>{schedule.result}</a>
             </td>
             <td>{schedule.winloss}</td>
             <td>
               <a href={`${schedule.link}`}>{schedule.stats.playerpass}</a>
-              {' '}
               {schedule.stats.pass}
-              {' '}
 yards
             </td>
             <td>
               <a href={`${schedule.link}`}>{schedule.stats.playerrush}</a>
-              {' '}
               {schedule.stats.rush}
-              {' '}
 yards
             </td>
             <td>
               <a href={`${schedule.link}`}>{schedule.stats.playerrec}</a>
-              {' '}
               {schedule.stats.rec}
-              {' '}
 yards
             </td>
           </tr>

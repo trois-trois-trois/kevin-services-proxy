@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 const style = {
@@ -12,22 +14,18 @@ const Feed = ({ ramsFeed }) => (
   <div>
     <ul>
       {ramsFeed.map(ramFeed => (
-        <li key={ramFeed.id} id="sidebar-wrapper">
+        <li key={ramFeed.id}>
           <div><img src={`${ramFeed.bigphoto}`} width={500} height={350} style={style.image} /></div>
           <div>
             {ramFeed.title}
-            {' '}
           </div>
           <div>
 author:
-            {' '}
             {ramFeed.author}
-            {' '}
             <img src={`${ramFeed.authorphoto}`} />
           </div>
           <p>
 Updates:
-            {' '}
             {ramFeed.newsfeed}
             <br />
             {ramFeed.timestamp}

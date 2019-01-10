@@ -11,7 +11,6 @@ class App extends Component {
       schedule: [],
       // ramsFeed: [],
       // home view should render schedule sidebar and gamefeed on the same page
-      // for now, test components by changing the "view" property until changeView method is implemented
       view: 'schedule',
     };
   }
@@ -45,22 +44,6 @@ class App extends Component {
     // receives props object, destructure properties
     // const { schedule, ramsFeed, view } = this.state;
     const { schedule, view } = this.state;
-    // if (view === 'home') {
-    //   return (
-    //     <div id="home">
-    //       <div id="sidebarSchedule">
-    //         <SidebarSchedule
-    //           ramsSchedule={schedule}
-    //         />
-    //       </div>
-    //       <div id="feed">
-    //         <Feed
-    //           ramsFeed={ramsFeed}
-    //         />
-    //       </div>
-    //     </div>
-    //   );
-    // }
     if (view === 'schedule') {
       return (
         <div id="fullschedule">
@@ -70,24 +53,6 @@ class App extends Component {
         </div>
       );
     }
-    // if (view === 'feed') {
-    //   return (
-    //     <div id="feed">
-    //       <Feed
-    //         ramsFeed={ramsFeed}
-    //       />
-    //     </div>
-    //   );
-    // }
-    // if (view === 'sidebarSchedule') {
-    //   return (
-    //     <div id="sidebarSchedule">
-    //       <SidebarSchedule
-    //         ramsSchedule={schedule}
-    //       />
-    //     </div>
-    //   );
-    // }
   }
 
   render() {
