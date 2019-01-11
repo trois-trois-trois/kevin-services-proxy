@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import Navigation from './components/Navigation';
 import Standings from './components/Standings';
 import FullStandings from './components/FullStandings';
 
@@ -49,7 +50,8 @@ export default class App extends Component {
     const { view, teams } = this.state;
     if (view === 'main') {
       return (
-        <div id="mainstandings">
+        <div id="main">
+          <Navigation teams={teams} />
           <Standings teams={teams} handleClick={this.handleClick} />
         </div>
       );

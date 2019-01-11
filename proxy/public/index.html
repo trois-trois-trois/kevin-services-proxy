@@ -7,16 +7,23 @@
     <title>ESPN NFL Team Page</title>
   </head>
   <body>
-    <div id="Standings"></div>
-    <div id="Schedule"></div>
-    <div id="TeamLeaders"></div>
-    <div id="Stats"></div>
+    <div id="Main">
+      <div id="Standings"></div>
+      <div id="Feed"></div>
+      <div id="SidebarSchedule"></div>
+      <!-- <div id="Schedule"></div> -->
+      <div id="TeamLeaders"></div>
+      <div id="Stats"></div>
+    </div>
     <script src="/lib/react.development.js"></script>
     <script src="/lib/react-dom.development.js"></script>
     <script src="http://localhost:3001/bundle.js"></script>
-    <script src="http://localhost:3002/bundle.js"></script>
+    <!-- <script src="http://localhost:3002/bundle.js"></script> -->
     <script src="http://localhost:3003/bundle.js"></script>
     <script src="http://localhost:3004/bundle.js"></script>
+    <script src="http://localhost:3005/bundle.js"></script>
+    <script src="http://localhost:3006/bundle.js"></script>
+
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
       ReactDOM.render(
@@ -24,9 +31,17 @@
         document.getElementById('Standings')
       );
       ReactDOM.render(
-      React.createElement(Schedule),
-      document.getElementById('Schedule')
-      );
+      React.createElement(Feed),
+      document.getElementById('Feed')
+    );
+      ReactDOM.render(
+      React.createElement(SidebarSchedule),
+      document.getElementById('SidebarSchedule')
+    );
+      // ReactDOM.render(
+      // React.createElement(Schedule),
+      // document.getElementById('Schedule')
+      // );
       ReactDOM.render(
       React.createElement(TeamLeaders),
       document.getElementById('TeamLeaders')

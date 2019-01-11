@@ -1,3 +1,4 @@
+/* eslint-disable react/prefer-stateless-function */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-underscore-dangle */
 import React from 'react';
@@ -45,4 +46,5 @@ const Navigation = (props) => {
     </div>
   );
 };
+
 export default Navigation;
