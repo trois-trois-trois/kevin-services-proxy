@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const FeedDB = require('../database/Models/FeedDB.js');
+const ScheduleDB = require('../database/Models/ScheduleDB.js');
 
 const app = express();
 
@@ -10,12 +10,13 @@ app.use(express.static(`${__dirname}/../client/dist`));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// feed endpoint
-app.get('/espn/feeds', (req, res) => {
-  FeedDB.find({}, (err, data) => {
+
+// Schedule endpoint
+app.get('/espn/schedules', (req, res) => {
+  ScheduleDB.find({}, (err, data) => {
   })
-    .limit(10)
-    .sort({ timestamp: 1 })
+    .limit(17)
+    .sort({ week: 1 })
     .then((data) => {
       res.send(data);
     })
@@ -24,7 +25,7 @@ app.get('/espn/feeds', (req, res) => {
     });
 });
 
-const port = process.env.PORT || 3005;
+const port = process.env.PORT || 3006;
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);

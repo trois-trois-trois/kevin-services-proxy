@@ -11,28 +11,43 @@ const style = {
 
 const Feed = ({ ramsFeed }) => (
 
-  <div>
-    <ul>
-      {ramsFeed.map(ramFeed => (
-        <li key={ramFeed.id}>
-          <div><img src={`${ramFeed.bigphoto}`} width={500} height={350} style={style.image} /></div>
+  <div className="container">
+    {ramsFeed.map(ramFeed => (
+      <div className="row" key={ramFeed.id}>
+        <div className="col-md-6">
           <div>
-            {ramFeed.title}
-          </div>
-          <div>
-author:
-            {ramFeed.author}
-            <img src={`${ramFeed.authorphoto}`} />
-          </div>
-          <p>
+            <div><img src={`${ramFeed.bigphoto}`} width={500} height={300} style={style.image} /></div>
+            <div>
+              <h2>
+                <strong>
+                  {ramFeed.title}
+                </strong>
+
+              </h2>
+            </div>
+            <div>
+              <img className="rounded-circle" width={28} height={28} src={`${ramFeed.authorphoto}`} />
+              {ramFeed.author}
+            </div>
+            <p>
+              <strong>
 Updates:
-            {ramFeed.newsfeed}
-            <br />
-            {ramFeed.timestamp}
-          </p>
-        </li>
-      ))}
-    </ul>
+              </strong>
+              {ramFeed.newsfeed}
+              <br />
+            </p>
+            <div><img src={`${ramFeed.smallphoto}`} width={300} height={200} style={style.image} /></div>
+            <p>
+              {ramFeed.newsfeed}
+              <br />
+            </p>
+            <p>
+              <img src="https://pbs.twimg.com/profile_images/1027403255607746560/dIyhrGOz_400x400.jpg" width={25} height={25} />
+              {ramFeed.timestamp}
+            </p>
+          </div>
+        </div>
+      </div>))}
   </div>
 );
 

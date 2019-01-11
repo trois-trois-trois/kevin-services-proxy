@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import Feed from './components/Feed';
+import SidebarSchedule from './components/SidebarSchedule';
+
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ramsFeed: [],
+      schedule: [],
       view: 'main',
     };
   }
 
   componentDidMount() {
     // fetch schedule data
-    axios.get('http://localhost:3005/espn/feeds', {
+    axios.get('http://localhost:3006/espn/schedules', {
       method: 'GET',
       mode: 'no-cors',
       headers: {
@@ -26,7 +27,7 @@ class App extends Component {
         // eslint-disable-next-line prefer-destructuring
         const data = res.data;
         this.setState({
-          ramsFeed: data,
+          schedule: data,
         });
       })
       .catch((err) => {
@@ -35,13 +36,12 @@ class App extends Component {
   }
 
   renderView() {
-    // const { schedule, ramsFeed, view } = this.state;
-    const { ramsFeed, view } = this.state;
+    const { schedule, view } = this.state;
     if (view === 'main') {
       return (
-        <div id="feed">
-          <Feed
-            ramsFeed={ramsFeed}
+        <div id="SidebarSchedule">
+          <SidebarSchedule
+            ramsSchedule={schedule}
           />
         </div>
       );
