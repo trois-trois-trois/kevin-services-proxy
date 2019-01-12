@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+#Feed {
+  position: absolute;
+  top: 140px;
+  margin: auto;
+  left: 600px;
+}
+
+#SidebarSchedule {
+  position: absolute;
+  top: 70px;
+  margin: auto;
+  left: 100px;
+}
