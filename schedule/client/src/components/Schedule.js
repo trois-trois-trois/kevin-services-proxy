@@ -90,7 +90,9 @@ const Schedule = ({ ramsSchedule }) => (
             </td>
             <td>{schedule.winloss}</td>
             <td>
-              <a href={`${schedule.link}`}>{schedule.stats.playerpass}</a>
+              <a href={`${schedule.link}`}>
+                {schedule.stats.playerpass}
+              </a>
               {schedule.stats.pass}
 yards
             </td>

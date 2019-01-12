@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+#Feed {
+  position: absolute;
+  top: 140px;
+  margin: auto;
+  left: 600px;
+  display: inline-block;
+}
+
+#SidebarSchedule {
+  position: absolute;
+  top: 70px;
+  margin: auto;
+  left: 100px;
+}
+
+#TeamLeaders {
+  position: absolute;
+  right: 175px;
+}
+
+#Stats {
+  position: absolute;
+  right: 175px;
+  top: 1300px;
+}

@@ -10,11 +10,12 @@ const Navigation = (props) => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/052016/untitled-1_242.png?itok=nRWq5scp" alt="espn" width="65px" />
         <a className="navbar-brand" href="/">
           <img src="https://a.espncdn.com/i/teamlogos/nfl/500/lar.png" alt="logo" width="50px" />
         </a>
         <h3>LOS ANGELES RAMS</h3>
-        <button type="button" className="btn btn-outline-primary btn-sm">Follow</button>
+        <button type="button" className="btn btn-outline-primary btn-sm" style={{ marginLeft: 25 }}>Follow</button>
         {nfcWestTeams.map(team => (
           <h6 key={team._id}>
             {team.wins}
