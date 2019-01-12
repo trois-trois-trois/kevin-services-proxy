@@ -8,6 +8,11 @@
   </head>
   <body>
     <div class="container-fluid">
+      </div>
+        <div class="row">
+            <div class="col-lg" >
+            <div id="NavBar"></div>
+        </div>
         <div class="row">
           <div class="col-sm-3" >
               <div id="SidebarSchedule"></div>
@@ -20,20 +25,23 @@
               <div id="TeamLeaders"></div>
               <div id="Stats"></div>
         </div>
-      <!-- <div id="Schedule"></div> -->
       </div>
     </div>
     <script src="/lib/react.development.js"></script>
     <script src="/lib/react-dom.development.js"></script>
     <script src="http://localhost:3001/bundle.js"></script>
-    <!-- <script src="http://localhost:3002/bundle.js"></script> -->
     <script src="http://localhost:3003/bundle.js"></script>
     <script src="http://localhost:3004/bundle.js"></script>
     <script src="http://localhost:3005/bundle.js"></script>
     <script src="http://localhost:3006/bundle.js"></script>
+    <script src="http://localhost:3007/bundle.js"></script>
 
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
+      ReactDOM.render(
+        React.createElement(NavBar),
+        document.getElementById('NavBar')
+      );
       ReactDOM.render(
         React.createElement(Standings),
         document.getElementById('Standings')
@@ -46,10 +54,6 @@
       React.createElement(SidebarSchedule),
       document.getElementById('SidebarSchedule')
     );
-      // ReactDOM.render(
-      // React.createElement(Schedule),
-      // document.getElementById('Schedule')
-      // );
       ReactDOM.render(
       React.createElement(TeamLeaders),
       document.getElementById('TeamLeaders')
