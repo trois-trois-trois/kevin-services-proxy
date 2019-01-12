@@ -30,14 +30,14 @@ class Teamleaders extends Component {
 
     if (side === 'Offense') {
       return (
-        <div id="container" className="col-lg-3 container alert alert-light">
+        <div className="col-lg-3 alert alert-light">
           <p className="text-dark font-weight-bold ">2019 Team Leaders:</p>
           <div className="row">
             <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Offense" onClick={() => changeSide('Offense')} />
+              <input className="btn btn-primary btn-sm" value="Offense" onClick={() => changeSide('Offense')} />
             </div>
             <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Defense" onClick={() => changeSide('Defense')} />
+              <input className="btn btn-primary btn-sm" value="Defense" onClick={() => changeSide('Defense')} />
             </div>
           </div>
           <br />
@@ -97,14 +97,16 @@ class Teamleaders extends Component {
       );
     } if (side === 'Defense') {
       return (
-        <div id="container" className="col-md-3 container alert alert-light ">
+        <div className="col-md-4 alert alert-light ">
+        <div className="row">
           <p className="text-dark font-weight-bold ">2019 Team Leaders:</p>
+        </div>
           <div className="row">
             <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Offense" onClick={() => changeSide('Offense')} />
+              <input className="btn btn-primary btn-sm" value="Offense" onClick={() => changeSide('Offense')} />
             </div>
             <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Defense" onClick={() => changeSide('Defense')} />
+              <input className="btn btn-primary btn-sm" value="Defense" onClick={() => changeSide('Defense')} />
             </div>
           </div>
           <br />

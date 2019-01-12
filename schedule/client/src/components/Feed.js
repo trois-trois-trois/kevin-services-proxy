@@ -11,28 +11,33 @@ const style = {
 
 const Feed = ({ ramsFeed }) => (
 
-  <div>
-    <ul>
-      {ramsFeed.map(ramFeed => (
-        <li key={ramFeed.id} id="sidebar-wrapper">
-          <div><img src={`${ramFeed.bigphoto}`} width={500} height={350} style={style.image} /></div>
-          <div>
-            {ramFeed.title}
-          </div>
-          <div>
+
+  <div className="container-fluid">
+    <div className="row justify-content-start">
+      <div className="col-4">
+        <ul>
+          {ramsFeed.map(ramFeed => (
+            <li key={ramFeed.id}>
+              <div><img src={`${ramFeed.bigphoto}`} width={500} height={350} style={style.image} /></div>
+              <div>
+                {ramFeed.title}
+              </div>
+              <div>
 author:
-            {ramFeed.author}
-            <img src={`${ramFeed.authorphoto}`} />
-          </div>
-          <p>
+                {ramFeed.author}
+                <img src={`${ramFeed.authorphoto}`} />
+              </div>
+              <p>
 Updates:
-            {ramFeed.newsfeed}
-            <br />
-            {ramFeed.timestamp}
-          </p>
-        </li>
-      ))}
-    </ul>
+                {ramFeed.newsfeed}
+                <br />
+                {ramFeed.timestamp}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   </div>
 );
 
