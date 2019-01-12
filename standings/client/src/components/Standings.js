@@ -13,7 +13,7 @@ const Standings = (props) => {
         alignItems: 'flex-end',
       }}
     >
-      <p><b>2018 NFC West Standings</b></p>
+      <h5>2018 NFC West Standings</h5>
       <table className="table table-hover table-sm rounded" style={{ width: 30, height: 30 }}>
         <thead>
           <tr>
