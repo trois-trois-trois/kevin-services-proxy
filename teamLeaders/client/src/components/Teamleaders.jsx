@@ -30,14 +30,15 @@ class Teamleaders extends Component {
 
     if (side === 'Offense') {
       return (
-        <div id="container" className="col-lg-3 container alert alert-light">
-          <p className="text-dark font-weight-bold ">2019 Team Leaders:</p>
+        <div className="col-sm alert alert-light">
+          <p className="h5 text-dark font-weight-bold ">2019 Team Leaders:</p>
+          <br />
           <div className="row">
-            <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Offense" onClick={() => changeSide('Offense')} />
+            <div className="col-sm text-center">
+              <input className="btn btn-primary btn-block btn-sm" value="Offense" onClick={() => changeSide('Offense')} />
             </div>
-            <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Defense" onClick={() => changeSide('Defense')} />
+            <div className="col-sm text-center">
+              <input className="btn btn-primary btn-block btn-sm" value="Defense" onClick={() => changeSide('Defense')} />
             </div>
           </div>
           <br />
@@ -90,6 +91,7 @@ class Teamleaders extends Component {
             </div>
           </div>
           <br />
+          <br />
           <a href="http://www.espn.com/nfl/team/stats/_/name/lar" target="_blank">
             <p className="text-center">Full Team Statistics</p>
           </a>
@@ -97,16 +99,21 @@ class Teamleaders extends Component {
       );
     } if (side === 'Defense') {
       return (
-        <div id="container" className="col-md-3 container alert alert-light ">
-          <p className="text-dark font-weight-bold ">2019 Team Leaders:</p>
+        <div className="col-sm alert alert-light ">
+        <div className="row">
+          <p className="h5 text-dark font-weight-bold ">2019 Team Leaders:</p>
+          <br />
+          <br />
+        </div>
           <div className="row">
-            <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Offense" onClick={() => changeSide('Offense')} />
+            <div className="col-sm text-center">
+              <input className="btn btn-primary btn-block btn-sm" value="Offense" onClick={() => changeSide('Offense')} />
             </div>
-            <div className="col-sm-6 text-center">
-              <input id="btn" type="button" value="Defense" onClick={() => changeSide('Defense')} />
+            <div className="col-sm text-center">
+              <input className="btn btn-primary btn-block btn-sm" value="Defense" onClick={() => changeSide('Defense')} />
             </div>
           </div>
+          <br />
           <br />
           <div id="dataContainer" className="justify-content-center">
             <p className="text-dark font-weight-bold">Tackles</p>
@@ -116,6 +123,7 @@ class Teamleaders extends Component {
                   <img className="rounded-circle float-left" src={Photos[4]} alt="player" />
                 </a>
               </div>
+              <br />
               <a href="http://www.espn.com/nfl/player/_/id/2978304" target="_blank">
                 <p id="playerName" className="text-secondary">{sample.map(elem => (elem.Defense.Tackles === totalTackles ? elem.Defense.Player : null))}</p>
               </a>
@@ -155,6 +163,7 @@ class Teamleaders extends Component {
               <br />
             </div>
           </div>
+          <br />
           <br />
           <a href="http://www.espn.com/nfl/team/stats/_/name/lar" target="_blank">
             <p className="text-center">Full Team Statistics</p>

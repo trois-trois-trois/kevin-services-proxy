@@ -3,9 +3,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-// import Navigation from './components/Navigation';
-import Standings from './components/Standings';
-import FullStandings from './components/FullStandings';
+import Navigation from './components/Navigation';
 
 export default class App extends Component {
   constructor(props) {
@@ -15,11 +13,10 @@ export default class App extends Component {
       view: 'main',
     };
     this.renderView = this.renderView.bind(this);
-    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/espn/teamstandings', {
+    axios.get('http://localhost:3007/espn/teamstandings', {
       method: 'GET',
       mode: 'no-cors',
       headers: {
@@ -38,27 +35,13 @@ export default class App extends Component {
       });
   }
 
-  handleClick() {
-    const { view } = this.state;
-    this.setState({
-      view: 'fullstandings',
-    });
-  }
-
   // eslint-disable-next-line consistent-return
   renderView() {
     const { view, teams } = this.state;
     if (view === 'main') {
       return (
         <div>
-          {/* <Navigation teams={teams} /> */}
-          <Standings teams={teams} handleClick={this.handleClick} />
-        </div>
-      );
-    } if (view === 'fullstandings') {
-      return (
-        <div>
-          <FullStandings teams={teams} />
+          <Navigation teams={teams} />
         </div>
       );
     }

@@ -11,11 +11,7 @@ import React from 'react';
 
 const Feed = ({ ramsFeed }) => (
 
-  <div
-    className="container"
-    style={{
-    }}
-  >
+  <div>
     {ramsFeed.map(ramFeed => (
       <div className="row" key={ramFeed.id}>
         <div className="col-md-6">

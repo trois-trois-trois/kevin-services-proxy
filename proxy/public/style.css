@@ -1,31 +1,33 @@
-.container {
+.container-fluid {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+}
+
+#Standings {
+  margin: auto;
+  padding-bottom: 20px;
 }
 
 #Feed {
-  position: absolute;
-  top: 140px;
   margin: auto;
-  left: 600px;
-  display: inline-block;
 }
 
 #SidebarSchedule {
-  position: absolute;
-  top: 70px;
+  justify-content: 'center';
   margin: auto;
-  left: 100px;
+
 }
 
 #TeamLeaders {
-  position: absolute;
-  right: 175px;
+  padding-top: 20px;
+  width: auto;
+  margin: auto;
+  justify-content: 'center';
 }
 
 #Stats {
-  position: absolute;
-  right: 175px;
-  top: 1300px;
+  padding-top: 20px;
+  width: auto;
+  margin: auto;
+  justify-content: 'center';
 }
