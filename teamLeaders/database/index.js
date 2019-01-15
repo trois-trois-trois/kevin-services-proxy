@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const onlineDb = require('../../../config/keys');
 
-mongoose.connect('mongodb://localhost/espn');
+mongoose.connect(onlineDb.mongoURI, { useNewUrlParser: true });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

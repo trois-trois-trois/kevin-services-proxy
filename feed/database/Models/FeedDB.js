@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
+const onlineDb = require('../../../config/keys');
 
-mongoose.connect('mongodb://localhost/espn/feeds');
-
+mongoose.connect(onlineDb.mongoURI, { useNewUrlParser: true });
 const db = mongoose.connection;
 mongoose.Promise = global.Promise;
 
