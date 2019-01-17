@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable consistent-return */
 import React, { Component } from 'react';
 import axios from 'axios';
@@ -17,7 +16,7 @@ class App extends Component {
 
   componentDidMount() {
     // fetch schedule data
-    axios.get('http://localhost:3002/espn/schedules', {
+    axios.get('http://localhost:3006/espn/schedules', {
       method: 'GET',
       mode: 'no-cors',
       headers: {
@@ -52,6 +51,14 @@ class App extends Component {
           <SidebarSchedule
             ramsSchedule={schedule}
             handleClick={this.handleClick}
+          />
+        </div>
+      );
+    } if (view === 'schedule') {
+      return (
+        <div id="fullschedule">
+          <Schedule
+            ramsSchedule={schedule}
           />
         </div>
       );
