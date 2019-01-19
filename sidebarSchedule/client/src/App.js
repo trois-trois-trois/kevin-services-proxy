@@ -16,7 +16,7 @@ class App extends Component {
 
   componentDidMount() {
     // fetch schedule data
-    axios.get('http://localhost:3006/espn/schedules', {
+    axios.get('espn/schedules', {
       method: 'GET',
       mode: 'no-cors',
       headers: {
