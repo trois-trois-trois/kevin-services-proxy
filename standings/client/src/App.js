@@ -18,7 +18,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/espn/teamstandings', {
+    axios.get('/espn/teamstandings', {
       method: 'GET',
       mode: 'no-cors',
       headers: {

@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server.js"
+    "start": "node ./server.js"
   },
   "author": "Kevin Phung",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "http-proxy-middleware": "^0.19.1",
+    "mongoose": "^5.4.5",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.9"
   }
