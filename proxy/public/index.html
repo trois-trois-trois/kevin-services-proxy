@@ -28,14 +28,12 @@
     </div>
     <script src="/lib/react.development.js"></script>
     <script src="/lib/react-dom.development.js"></script>
-    <script src="https://s3.amazonaws.com/standingsproxy/bundle.js"></script>
+    <script src="https://s3.amazonaws.com/standingsproxy2/bundle.js"></script>
     <script src="https://s3.amazonaws.com/teamleadersproxy/bundle.js"></script>
     <script src="https://s3.amazonaws.com/statsproxy/bundle.js"></script>
     <script src="https://s3.amazonaws.com/feedproxy/bundle.js"></script>
-    <script src="https://s3.amazonaws.com/sidescheduleproxy/bundle.js"></script>
+    <script src="https://s3.amazonaws.com/sidebarscheduleproxy2/bundle.js"></script>
     <script src="https://s3.amazonaws.com/navbarproxy/bundle.js"></script>
-
-    <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
       ReactDOM.render(
         React.createElement(NavBar),
@@ -48,11 +46,11 @@
       ReactDOM.render(
       React.createElement(Feed),
       document.getElementById('Feed')
-    );
+      );
       ReactDOM.render(
       React.createElement(SidebarSchedule),
       document.getElementById('SidebarSchedule')
-    );
+      );
       ReactDOM.render(
       React.createElement(TeamLeaders),
       document.getElementById('TeamLeaders')

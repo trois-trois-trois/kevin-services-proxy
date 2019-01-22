@@ -9,7 +9,7 @@ const style = {
   },
 };
 
-const SidebarSchedule = ({ ramsSchedule, handleClick }) => (
+const SidebarSchedule = ({ ramsSchedule }) => (
   <div className="col-sm">
     <p className="h5 text-dark font-weight-bold">REGULAR SEASON</p>
     <table className="table table-striped table-hover">
@@ -55,7 +55,7 @@ const SidebarSchedule = ({ ramsSchedule, handleClick }) => (
         ))}
       </tbody>
     </table>
-    <button type="button" className="btn btn-link btn-lg" onClick={handleClick}>Full Schedule</button>
+    <a href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/"><button type="button" className="btn btn-link btn-lg">Full Schedule</button></a>
   </div>
 );
 

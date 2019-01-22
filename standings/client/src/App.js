@@ -4,17 +4,13 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import Standings from './components/Standings';
-import FullStandings from './components/FullStandings';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       teams: [],
-      view: 'main',
     };
-    this.renderView = this.renderView.bind(this);
-    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -37,34 +33,13 @@ export default class App extends Component {
       });
   }
 
-  handleClick() {
-    const { view } = this.state;
-    this.setState({
-      view: 'fullstandings',
-    });
-  }
-
   // eslint-disable-next-line consistent-return
-  renderView() {
-    const { view, teams } = this.state;
-    if (view === 'main') {
-      return (
-        <div>
-          <Standings teams={teams} handleClick={this.handleClick} />
-        </div>
-      );
-    } if (view === 'fullstandings') {
-      return (
-        <div>
-          <FullStandings teams={teams} />
-        </div>
-      );
-    }
-  }
-
   render() {
+    const { teams } = this.state;
     return (
-      this.renderView()
+      <div>
+        <Standings teams={teams} />
+      </div>
     );
   }
 }

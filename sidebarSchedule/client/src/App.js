@@ -9,9 +9,7 @@ class App extends Component {
     super(props);
     this.state = {
       schedule: [],
-      view: 'main',
     };
-    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -36,39 +34,11 @@ class App extends Component {
       });
   }
 
-  handleClick() {
-    const { view } = this.state;
-    this.setState({
-      view: 'schedule',
-    });
-  }
-
-  renderView() {
-    const { schedule, view } = this.state;
-    if (view === 'main') {
-      return (
-        <div id="SidebarSchedule">
-          <SidebarSchedule
-            ramsSchedule={schedule}
-            handleClick={this.handleClick}
-          />
-        </div>
-      );
-    } if (view === 'schedule') {
-      return (
-        <div id="fullschedule">
-          <Schedule
-            ramsSchedule={schedule}
-          />
-        </div>
-      );
-    }
-  }
-
   render() {
+    const { schedule } = this.state;
     return (
-      <div>
-        {this.renderView()}
+      <div id="SidebarSchedule">
+        <SidebarSchedule ramsSchedule={schedule} />
       </div>
     );
   }
