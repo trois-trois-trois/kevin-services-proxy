@@ -3,7 +3,7 @@
 import React from 'react';
 
 const Standings = (props) => {
-  const { teams, handleClick } = props;
+  const { teams } = props;
   const nfcWestTeams = teams.filter(team => team.division === 'NFC WEST').sort((a, b) => b.wins - a.wins);
 
   return (
@@ -35,7 +35,7 @@ const Standings = (props) => {
           ))}
         </tbody>
       </table>
-      <button type="button" className="btn btn-link" onClick={handleClick}>Full Standings</button>
+      <a href="http://feckevinservicesfullstandings-env.uqrtgu3hp9.us-east-1.elasticbeanstalk.com/"><button type="button" className="btn btn-link">Full Standings</button></a>
     </div>
   );
 };
