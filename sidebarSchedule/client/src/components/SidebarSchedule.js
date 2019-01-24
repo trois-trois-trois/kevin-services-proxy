@@ -27,27 +27,27 @@ const SidebarSchedule = ({ ramsSchedule }) => (
 
         {ramsSchedule.map(schedule => (
 
-          <tr key={schedule.id} className="clickable-row" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+          <tr key={schedule.id} className="clickable-row" href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/">
             <td>
-              <a href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+              <a href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/">
                 <img src={`${schedule.opponentlogo}`} className="rounded-circle" width={20} height={20} style={style.image} />
               </a>
-              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+              <a className="text-dark" href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/">
                 {schedule.vs}
               </a>
             </td>
             <td>
-              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+              <a className="text-dark" href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/">
                 {schedule.opponent}
               </a>
             </td>
             <td>
-              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+              <a className="text-dark" href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/">
                 {schedule.wl}
               </a>
             </td>
             <td>
-              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
+              <a className="text-dark" href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/">
                 <p>{schedule.result}</p>
               </a>
             </td>
