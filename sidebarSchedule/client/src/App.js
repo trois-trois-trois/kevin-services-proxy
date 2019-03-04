@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import Schedule from './components/Schedule';
 import SidebarSchedule from './components/SidebarSchedule';
 
 class App extends Component {
@@ -9,12 +10,14 @@ class App extends Component {
     super(props);
     this.state = {
       schedule: [],
+      view: 'main',
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
     // fetch schedule data
-    axios.get('espn/schedules', {
+    axios.get('/espn/schedules', {
       method: 'GET',
       mode: 'no-cors',
       headers: {
@@ -34,11 +37,39 @@ class App extends Component {
       });
   }
 
+  handleClick() {
+    const { view } = this.state;
+    this.setState({
+      view: 'schedule',
+    });
+  }
+
+  renderView() {
+    const { schedule, view } = this.state;
+    if (view === 'main') {
+      return (
+        <div id="SidebarSchedule">
+          <SidebarSchedule
+            ramsSchedule={schedule}
+            handleClick={this.handleClick}
+          />
+        </div>
+      );
+    } if (view === 'schedule') {
+      return (
+        <div id="fullschedule">
+          <Schedule
+            ramsSchedule={schedule}
+          />
+        </div>
+      );
+    }
+  }
+
   render() {
-    const { schedule } = this.state;
     return (
-      <div id="SidebarSchedule">
-        <SidebarSchedule ramsSchedule={schedule} />
+      <div>
+        {this.renderView()}
       </div>
     );
   }

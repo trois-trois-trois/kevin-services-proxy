@@ -6,8 +6,8 @@
   "scripts": {
     "react": "webpack -d --watch",
     "server": "nodemon server/index.js rs",
-    "seedschedule": "node database/seedscripts/seedschedule.js",
-    "seedfeed": "node database/seedscripts/seedfeed.js",
+    "start": "node server/index.js rs",
+    "seed": "knex seed:run",
     "test": "jest --coverage"
   },
   "author": "Joe Boulos",
@@ -40,8 +40,14 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
+    "bookshelf": "^0.14.2",
     "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "knex": "^0.16.3",
+    "newrelic": "^5.5.0",
     "node-fetch": "^2.3.0",
+    "pg": "^7.8.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^4.3.1",

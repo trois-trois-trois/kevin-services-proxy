@@ -9,7 +9,7 @@ const style = {
   },
 };
 
-const SidebarSchedule = ({ ramsSchedule }) => (
+const SidebarSchedule = ({ ramsSchedule, handleClick }) => (
   <div className="col-sm">
     <p className="h5 text-dark font-weight-bold">REGULAR SEASON</p>
     <table className="table table-striped table-hover">
@@ -27,27 +27,27 @@ const SidebarSchedule = ({ ramsSchedule }) => (
 
         {ramsSchedule.map(schedule => (
 
-          <tr key={schedule.id} className="clickable-row" href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/">
+          <tr key={schedule.id} className="clickable-row" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
             <td>
-              <a href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/">
+              <a href="http://www.espn.com/nfl/team/schedule/_/name/lar">
                 <img src={`${schedule.opponentlogo}`} className="rounded-circle" width={20} height={20} style={style.image} />
               </a>
-              <a className="text-dark" href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/">
+              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
                 {schedule.vs}
               </a>
             </td>
             <td>
-              <a className="text-dark" href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/">
+              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
                 {schedule.opponent}
               </a>
             </td>
             <td>
-              <a className="text-dark" href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/">
+              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
                 {schedule.wl}
               </a>
             </td>
             <td>
-              <a className="text-dark" href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/">
+              <a className="text-dark" href="http://www.espn.com/nfl/team/schedule/_/name/lar">
                 <p>{schedule.result}</p>
               </a>
             </td>
@@ -55,7 +55,7 @@ const SidebarSchedule = ({ ramsSchedule }) => (
         ))}
       </tbody>
     </table>
-    <a href="http://mainschedule-env.x2iugg8dsg.us-east-2.elasticbeanstalk.com/"><button type="button" className="btn btn-link btn-lg">Full Schedule</button></a>
+    <button type="button" className="btn btn-link btn-lg" onClick={handleClick}>Full Schedule</button>
   </div>
 );
 

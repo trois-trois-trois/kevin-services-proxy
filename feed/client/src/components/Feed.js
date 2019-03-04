@@ -1,12 +1,10 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/prop-types */
 import React from 'react';
 
 const Feed = ({ ramsFeed }) => (
-
-  <div className="col-md">
+  <div>
     <table className="table">
       <thead>
         <tr>
@@ -27,7 +25,7 @@ const Feed = ({ ramsFeed }) => (
         <div className="col-md-6"> */}
             <td>
               {/* <div> */}
-              <div><img src={`${ramFeed.bigphoto}`} className="img-fluid" alt="Responsive image" width={800} height={500} /></div>
+              <div><img src={`${ramFeed.bigphoto}`} width={800} height={500} /></div>
               <div>
                 <h2>
                   <strong>
@@ -58,7 +56,7 @@ Updates:
               {/* </td> */}
 
               {/* <td> */}
-              <iframe width="560" height="315" src={`${ramFeed.videoclip}`} frameBorder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+              <iframe width="560" height="315" src={`${ramFeed.videoclip}`} frameBorder="0"  allowFullScreen />
               <p>
                 {ramFeed.newsfeed}
                 <br />

@@ -2,6 +2,7 @@
 /* eslint-disable no-undef */
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import axios from 'axios';
 import App from './App';
 
 jest.mock('./components/Schedule', () => 'schedule');
@@ -36,17 +37,10 @@ describe('API calls to database', () => {
   it('Should fetch /espn/schedules', () => {
     const spy = jest.spyOn(App.prototype, 'componentDidMount');
     const wrapper = mount(<App />);
-    wrapper.instance().componentDidMount(fetch('espn/schedules'));
-    expect(spy).toHaveBeenCalled();
-  });
-  it('Should fetch /espn/feeds', () => {
-    const spy = jest.spyOn(App.prototype, 'componentDidMount');
-    const wrapper = mount(<App />);
-    wrapper.instance().componentDidMount(fetch('espn/feeds'));
+    wrapper.instance().componentDidMount(axios.get('espn/schedules'));
     expect(spy).toHaveBeenCalled();
   });
 });
-
 // it("should render Schedule component", () => {
 //   const tree = renderer.create(<Schedule/>).toJSON()
 //   expect(tree).toMatchSnapshot();
