@@ -1,7 +1,10 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable prefer-destructuring */
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable import/extensions */
 import React, { Component } from 'react';
 import $ from 'jquery';
+import axios from 'axios';
 import Teamleaders from './components/Teamleaders.jsx';
 
 
@@ -16,41 +19,21 @@ class App extends Component {
   }
 
   componentDidMount() {
-    $.ajax({
-      method: 'GET',
-      url: '/stats',
-      mode: 'no-cors',
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
-      },
-      error: (err) => {
-        console.log(err, 'err');
-      },
-      success: (data) => {
+    axios.get('/stats',
+      {
+        method: 'GET',
+        mode: 'no-cors',
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json',
+        },
+      })
+      .then((res) => {
+        const data = res.data;
         this.setState({
           sample: data,
         });
-      },
-    });
-    $.ajax({
-      method: 'GET',
-      url: '/photos',
-      mode: 'no-cors',
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
-      },
-      dataType: 'json',
-      error: (err) => {
-        console.log(err, 'err');
-      },
-      success: (data) => {
-        this.setState({
-          photos: data,
-        });
-      },
-    });
+      });
   }
 
   changeSide(e) {

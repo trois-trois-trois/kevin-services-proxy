@@ -2,6 +2,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+const onlineDb = require('../../config/keys');
+const api = onlineDb.api;
+
 import Feed from './components/Feed';
 
 class App extends Component {
@@ -37,6 +40,7 @@ class App extends Component {
 
   renderView() {
     // const { schedule, ramsFeed, view } = this.state;
+    console.log('this is what Feed component is receiving', this.state.ramsFeed)
     const { ramsFeed, view } = this.state;
     if (view === 'main') {
       return (

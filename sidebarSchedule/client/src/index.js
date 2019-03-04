@@ -1,5 +1,5 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-import SidebarSchedule from './App';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-window.SidebarSchedule = SidebarSchedule;
+ReactDOM.render(<App />, document.getElementById('SidebarSchedule'));

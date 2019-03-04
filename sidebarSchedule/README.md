@@ -39,11 +39,21 @@ From within the root directory:
 npm install -g webpack
 npm install
 ```
+
+## database setup
+to add schedume 
+      mysql -u root < /database/Model/ScheduleDB.sql 
+to add example data 
+      node /database/seedscripts/seedschedule.js
+
+
 ## Setup
 
 ```sh
 To start the server: npm run server
 To start webpack: npm run react
 To seed the Schedule database: npm run seedschedule
+
+Open service on http://localhost:3005/
 ```
 
