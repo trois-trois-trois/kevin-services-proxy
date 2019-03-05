@@ -27,8 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(proxy("/espn/feeds", {target: 'http://localhost:3005'}));
 app.use(proxy("/espn/teamstandings", {target: 'http://localhost:4000'}));
 app.use(proxy("/stats", {target: 'http://localhost:3001'}));
+app.use(proxy("/espn/schedules", {target: 'http://localhost:3007'}));
 // app.use(proxy("/espn/standings", {target: 'http://localhost:4000'}));
-// app.use(proxy("/espn/schedules", {target: 'http://localhost:3007'}));
 
 
 
